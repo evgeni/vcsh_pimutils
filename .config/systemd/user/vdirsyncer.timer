@@ -1,0 +1,9 @@
+[Unit]
+Description=vdirsyncer timer
+
+[Timer]
+OnCalendar=*:0/10
+Unit=vdirsyncer.service
+
+[Install]
+WantedBy=timers.target

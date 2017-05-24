@@ -1,0 +1,11 @@
+[Unit]
+Description=vdirsyncer
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/vdirsyncer discover
+ExecStartPre=/usr/bin/vdirsyncer metasync
+ExecStart=/usr/bin/vdirsyncer sync
+StandardOutput=syslog
+StandardError=syslog
+TimeoutStartSec=10m
